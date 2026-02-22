@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Calendar, MapPin, Clock } from "lucide-react";
+import { Calendar, MapPin, Clock, Download } from "lucide-react";
+import { DOCUMENTS } from "@shared/constants";
 
 export default function Events() {
   const { t } = useLanguage();
@@ -90,6 +91,27 @@ export default function Events() {
             <p className="text-lg text-gray-600">{t("events.noEvents")}</p>
           </div>
         )}
+
+        {/* Documents telechargeables */}
+        <div className="mt-20 bg-green-50 p-8 rounded-lg">
+          <h2 className="text-2xl font-bold mb-6 text-green-900">
+            Documents et brochures
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a
+              href={DOCUMENTS.maiDesArts2018}
+              download
+              className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-600"
+            >
+              <Download className="w-8 h-8 text-green-600 flex-shrink-0" />
+              <div className="flex-1">
+                <h3 className="font-bold text-gray-900 mb-1">Mai des Arts 2018</h3>
+                <p className="text-sm text-gray-600">Brochure de l'evenement culturel</p>
+              </div>
+              <span className="text-sm text-green-600 font-semibold">PDF</span>
+            </a>
+          </div>
+        </div>
 
         {/* Newsletter Signup */}
         <div className="mt-20 bg-blue-50 p-8 rounded-lg text-center">

@@ -29,6 +29,11 @@ export const CONTACT = {
   phone: "+33 (0)5 53 57 03 11",
 };
 
+// Documents téléchargeables
+export const DOCUMENTS = {
+  maiDesArts2018: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/QBRaHynxeoYajUbf.pdf",
+};
+
 // Langues supportées
 export const LANGUAGES = {
   FR: "fr",
