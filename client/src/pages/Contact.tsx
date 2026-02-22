@@ -1,5 +1,4 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { MapComponent } from "@/components/MapComponent";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { CONTACT } from "@shared/constants";
 
@@ -92,10 +91,21 @@ export default function Contact() {
 
           {/* Map */}
           <div>
-            <MapComponent
-              title="Nos deux villes"
-              description="Cliquez sur les marqueurs pour en savoir plus sur Bergerac et Faenza."
-            />
+            <h2 className="text-3xl font-bold mb-4 text-blue-900">Nos deux villes</h2>
+            <p className="text-gray-700 mb-6">
+              Bergerac, ville viticole en Dordogne, et Faenza, capitale de la céramique en Italie.
+            </p>
+            <div className="rounded-lg shadow-md overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90512.28304917409!2d0.3323925009163121!3d44.851934877346956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aad07c6048f55f%3A0xd23474adfc552221!2s24100%20Bergerac%2C%20France!5e0!3m2!1sfr!2snl!4v1771794929010!5m2!1sfr!2snl"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </div>

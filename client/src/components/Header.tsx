@@ -25,27 +25,27 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <img
-                src={IMAGES.logo}
-                alt="Jumelage Bergerac-Faenza"
-                className="h-12 w-12"
-              />
-              <div className="hidden sm:block">
-                <h1 className="text-lg font-bold text-blue-900">Jumelage</h1>
-                <p className="text-xs text-gray-600">Bergerac-Faenza</p>
-              </div>
-            </a>
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img
+              src={IMAGES.logo}
+              alt="Jumelage Bergerac-Faenza"
+              className="h-12 w-12"
+            />
+            <div className="hidden sm:block">
+              <h1 className="text-lg font-bold text-blue-900">Jumelage</h1>
+              <p className="text-xs text-gray-600">Bergerac-Faenza</p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm">
-                  {item.label}
-                </a>
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm"
+              >
+                {item.label}
               </Link>
             ))}
           </nav>
@@ -53,12 +53,10 @@ export function Header() {
           {/* Right Section */}
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
-            <Link href="/join">
-              <a>
-                <Button className="hidden sm:inline-flex bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
-                  {t("nav.join")}
-                </Button>
-              </a>
+            <Link href="/join" className="hidden sm:inline-flex">
+              <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
+                {t("nav.join")}
+              </Button>
             </Link>
 
             {/* Mobile Menu Button */}
@@ -79,21 +77,19 @@ export function Header() {
         {mobileMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t pt-4 flex flex-col gap-3">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a
-                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.label}
               </Link>
             ))}
-            <Link href="/join">
-              <a onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600">
-                  {t("nav.join")}
-                </Button>
-              </a>
+            <Link href="/join" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600">
+                {t("nav.join")}
+              </Button>
             </Link>
           </nav>
         )}

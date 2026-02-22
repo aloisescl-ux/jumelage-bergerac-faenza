@@ -41,3 +41,10 @@
 - [x] Vérifier l'accessibilité (WCAG)
 - [x] Optimiser les performances
 - [x] Checkpoint final et préparation à la livraison
+
+
+## Bugs Corrigés
+- [x] Erreur de balise <a> imbriquée dans le Header (wouter Link avec enfants <a>)
+
+## Améliorations Apportées
+- [x] Intégration de l'iframe Google Maps officielle sur la page Contact
