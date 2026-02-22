@@ -58,6 +58,15 @@ export default function About() {
           <p className="text-gray-700 leading-relaxed">
             Le jumelage bénéficie de l'aide et du soutien de la Ville de Bergerac pour œuvrer à la promotion d'échanges dans tous les domaines : culturels, sportifs, économiques et sociaux.
           </p>
+
+          {/* Panneau des jumelages */}
+          <div className="mt-12 flex justify-center">
+            <img
+              src={IMAGES.twinningSign}
+              alt="Panneau des jumelages de Bergerac"
+              className="max-w-md h-auto rounded-lg shadow-lg"
+            />
+          </div>
         </section>
 
         {/* 20 ans */}

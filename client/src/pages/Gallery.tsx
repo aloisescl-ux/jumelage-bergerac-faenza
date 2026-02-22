@@ -65,6 +65,13 @@ export default function Gallery() {
       image: IMAGES.vignoble,
       description: "Les vignobles de la région d'Émilie-Romagne"
     },
+    {
+      id: 9,
+      title: "Panneau des jumelages",
+      category: "Bergerac",
+      image: IMAGES.twinningSign,
+      description: "Le panneau des villes jumelées avec Bergerac : Faenza, Kénitra, Ostrów Wielkopolski, Repentigny"
+    },
   ];
 
   const handleNext = () => {

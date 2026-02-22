@@ -14,6 +14,7 @@ export const IMAGES = {
   faenzaCeramics: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/HYrPIxitUBAIrQwZ.webp",
   ceramicsDetail: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/SNThLdfDEGGzvxDD.jpg",
   faenzaCity: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/F3RRG6v5Xie7.jpg",
+  twinningSign: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/QpQDBfuRIzyPGSwq.png",
 };
 
 // Coordonnées géographiques
