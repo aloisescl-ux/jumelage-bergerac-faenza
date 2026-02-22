@@ -4,10 +4,16 @@
 
 // Images CDN
 export const IMAGES = {
-  heroBergerac: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/EmMVjcLRMikOFikI.webp",
-  heroFaenza: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/fxkkMoBTMlLuiaFM.jpg",
-  vignoble: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/ZvfaFclRxoHMeuBS.jpg",
+  heroBergerac: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/QroJEfndaqbBbPrt.webp",
+  heroFaenza: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/AsDdVJSXGFqvYObG.jpg",
+  vignoble: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/iREzaUsgyBjVHNBD.jpg",
   logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/TjaqCIsOPniugEet.webp",
+  bergeracMedieval: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/jqHTBXJMDhtZkwDt.jpg",
+  bergeracVillage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/ocoqslguFgrrcgYy.jpg",
+  faenzaArchitecture: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/mjQiPQZHrijCcRyK.jpg",
+  faenzaCeramics: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/HYrPIxitUBAIrQwZ.webp",
+  ceramicsDetail: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/SNThLdfDEGGzvxDD.jpg",
+  faenzaCity: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/F3RRG6v5Xie7.jpg",
 };
 
 // Coordonnées géographiques
@@ -19,7 +25,7 @@ export const LOCATIONS = {
 // Contacts
 export const CONTACT = {
   email: "assojumelage.bergerac.faenza@gmail.com",
-  phone: "+33 (0)5 53 57 03 11", // À confirmer
+  phone: "+33 (0)5 53 57 03 11",
 };
 
 // Langues supportées
