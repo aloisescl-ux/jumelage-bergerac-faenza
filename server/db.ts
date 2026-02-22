@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, InsertMembership, memberships, events, galleryItems } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,77 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+/**
+ * Adhésions
+ */
+export async function createMembership(membership: InsertMembership) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(memberships).values(membership);
+  return result;
+}
+
+export async function getMemberships() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(memberships);
+}
+
+export async function getMembershipById(id: number) {
+  const db = await getDb();
+  if (!db) {
+    return undefined;
+  }
+
+  const result = await db.select().from(memberships).where(eq(memberships.id, id)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+/**
+ * Événements
+ */
+export async function getUpcomingEvents() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  // Get all events - filtering will be done in application logic
+  return await db.select().from(events);
+}
+
+export async function getAllEvents() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(events);
+}
+
+/**
+ * Galerie
+ */
+export async function getGalleryItems() {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(galleryItems);
+}
+
+export async function getGalleryItemsByCategory(category: string) {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(galleryItems).where(eq(galleryItems.category, category));
+}

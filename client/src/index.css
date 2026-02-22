@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -43,6 +45,11 @@
 }
 
 :root {
+  /* Couleurs FR/IT */
+  --blue-france: oklch(0.55 0.2 260);
+  --green-italy: oklch(0.6 0.2 140);
+  --red-accent: oklch(0.6 0.2 30);
+  
   --primary: var(--color-blue-700);
   --primary-foreground: var(--color-blue-50);
   --sidebar-primary: var(--color-blue-600);
@@ -118,7 +125,12 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

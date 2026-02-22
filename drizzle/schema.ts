@@ -1,4 +1,14 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import {
+  int,
+  mysqlEnum,
+  mysqlTable,
+  text,
+  timestamp,
+  varchar,
+  boolean,
+  date,
+  time,
+} from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -25,4 +35,61 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Adhésions à l'association
+ */
+export const memberships = mysqlTable("memberships", {
+  id: int("id").autoincrement().primaryKey(),
+  civility: varchar("civility", { length: 10 }).notNull(), // M, Mme, Mlle
+  firstName: varchar("firstName", { length: 100 }).notNull(),
+  lastName: varchar("lastName", { length: 100 }).notNull(),
+  address: text("address").notNull(),
+  phone: varchar("phone", { length: 20 }),
+  email: varchar("email", { length: 320 }).notNull(),
+  italianOrigin: boolean("italianOrigin").default(false),
+  status: mysqlEnum("status", ["pending", "approved", "rejected"]).default("pending"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Membership = typeof memberships.$inferSelect;
+export type InsertMembership = typeof memberships.$inferInsert;
+
+/**
+ * Événements de l'association
+ */
+export const events = mysqlTable("events", {
+  id: int("id").autoincrement().primaryKey(),
+  titleFr: varchar("titleFr", { length: 255 }).notNull(),
+  titleIt: varchar("titleIt", { length: 255 }).notNull(),
+  descriptionFr: text("descriptionFr"),
+  descriptionIt: text("descriptionIt"),
+  eventDate: date("eventDate").notNull(),
+  eventTime: time("eventTime"),
+  location: varchar("location", { length: 255 }).notNull(),
+  category: varchar("category", { length: 50 }), // Cours, Atelier, Voyage, etc.
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Event = typeof events.$inferSelect;
+export type InsertEvent = typeof events.$inferInsert;
+
+/**
+ * Galerie photos
+ */
+export const galleryItems = mysqlTable("galleryItems", {
+  id: int("id").autoincrement().primaryKey(),
+  titleFr: varchar("titleFr", { length: 255 }).notNull(),
+  titleIt: varchar("titleIt", { length: 255 }).notNull(),
+  descriptionFr: text("descriptionFr"),
+  descriptionIt: text("descriptionIt"),
+  imageUrl: text("imageUrl").notNull(),
+  category: varchar("category", { length: 50 }), // Événements, Activités, Patrimoine, etc.
+  displayOrder: int("displayOrder").default(0),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type GalleryItem = typeof galleryItems.$inferSelect;
+export type InsertGalleryItem = typeof galleryItems.$inferInsert;
