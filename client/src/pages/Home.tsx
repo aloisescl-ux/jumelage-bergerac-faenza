@@ -33,15 +33,13 @@ export default function Home() {
             {t("hero.description")}
           </p>
           <Link href="/about">
-            <a>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white"
-              >
-                {t("hero.cta")}
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </a>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white"
+            >
+              {t("hero.cta")}
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
           </Link>
         </div>
       </section>
@@ -61,11 +59,9 @@ export default function Home() {
                 {t("about.missionText")}
               </p>
               <Link href="/about">
-                <a>
-                  <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                    {t("nav.about")}
-                  </Button>
-                </a>
+                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  {t("nav.about")}
+                </Button>
               </Link>
             </div>
             <div className="relative h-80">
@@ -116,11 +112,9 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Link href="/activities">
-              <a>
-                <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
-                  {t("nav.activities")}
-                </Button>
-              </a>
+              <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
+                {t("nav.activities")}
+              </Button>
             </Link>
           </div>
         </div>
@@ -136,14 +130,12 @@ export default function Home() {
             {t("form.title")}
           </p>
           <Link href="/join">
-            <a>
-              <Button
-                size="lg"
-                className="bg-white text-blue-900 hover:bg-gray-100"
-              >
-                {t("nav.join")}
-              </Button>
-            </a>
+            <Button
+              size="lg"
+              className="bg-white text-blue-900 hover:bg-gray-100"
+            >
+              {t("nav.join")}
+            </Button>
           </Link>
         </div>
       </section>
