@@ -17,6 +17,7 @@ export function Header() {
     { label: t("nav.gallery"), href: "/gallery" },
     { label: t("nav.events"), href: "/events" },
     { label: t("nav.heritage"), href: "/heritage" },
+    { label: "Partenaires", href: "/partners" },
     { label: t("nav.contact"), href: "/contact" },
   ];
 

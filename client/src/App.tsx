@@ -15,6 +15,7 @@ import Events from "./pages/Events";
 import Heritage from "./pages/Heritage";
 import JoinForm from "./pages/JoinForm";
 import Contact from "./pages/Contact";
+import Partners from "./pages/Partners";
 
 function Router() {
   return (
@@ -30,6 +31,7 @@ function Router() {
           <Route path="/heritage" component={Heritage} />
           <Route path="/join" component={JoinForm} />
           <Route path="/contact" component={Contact} />
+          <Route path="/partners" component={Partners} />
           <Route path="/404" component={NotFound} />
           <Route component={NotFound} />
         </Switch>
