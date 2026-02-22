@@ -100,7 +100,7 @@ export default function Home() {
                 key={idx}
                 className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="text-4xl mb-4">{activity.icon}</div>
+                <div className="text-5xl mb-4 flex justify-center">{activity.icon}</div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   {activity.title}
                 </h3>
