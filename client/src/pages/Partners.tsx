@@ -26,6 +26,13 @@ export default function Partners() {
       website: "https://www.utlbergerac.fr/page/2888267-programme-2025-2026-home",
       category: "Culture"
     },
+    {
+      id: 4,
+      name: " MMA",
+      description: "Avec 1 600 agences réparties dans toute la France, nos conseillers vous accompagnent au quotidien pour trouver des solutions adaptées à vos besoins. Chaque jour, plus de 3 millions d’assurés nous font confiance pour protéger leur famille, leur entreprise, leurs projets.",
+      website: "https://www.mma.fr/",
+      category: "Finance"
+    },
   ];
 
   return (
