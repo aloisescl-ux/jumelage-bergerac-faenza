@@ -28,23 +28,35 @@ export const IMAGES = {
   faenzaSquare: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/lAdFjZcRegbopChH.jpg",
   cyranoStatue: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/nsrkBmJdPIarTZEi.jpg",
   cyranoStatues: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/UQgPsgQzFIZbdQzH.jpg",
+  // Photos Dordogne
+  dordogneRiver1: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/xxKfeVJqHfnNrtSO.jpg",
+  dordogneRiver2: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/DbhBCccCjNLxciZi.jpg",
+  dordogneRiver3: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/JSYZEFgGFKYlyYMZ.jpg",
+  // Logo RVB bleu
+  rvbLogoBlue: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/sgYqbFLoZbYqsATa.png",
 };
 
 // Coordonnées géographiques
 export const LOCATIONS = {
   bergerac: { lat: 44.8548, lng: -0.5058, name: "Bergerac, France" },
-  faenza: { lat: 44.2831, lng: 11.8744, name: "Faenza, Italy" },
+  faenza: { lat: 44.3022, lng: 11.8744, name: "Faenza, Italy" },
 };
 
 // Contacts
 export const CONTACT = {
   email: "assojumelage.bergerac.faenza@gmail.com",
   phone: "+33 (0)5 53 57 03 11",
+  faenzaAddress: "Via Cavour, 48018 Faenza (RA), Italie",
 };
 
 // Documents téléchargeables
 export const DOCUMENTS = {
-  maiDesArts2018: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/QBRaHynxeoYajUbf.pdf",
+  maiDesArts2018: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/ifBSexNAdVlpYEKA.pdf",
+};
+
+// Documents PDF
+export const PDF_DOCUMENTS = {
+  maiDesArts2018: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663375081020/ifBSexNAdVlpYEKA.pdf",
 };
 
 // Langues supportées
@@ -52,5 +64,8 @@ export const LANGUAGES = {
   FR: "fr",
   IT: "it",
 } as const;
+
+// Adresse Faenza
+export const FAENZA_ADDRESS = "Via Cavour, 48018 Faenza (RA), Italie";
 
 export type Language = typeof LANGUAGES[keyof typeof LANGUAGES];

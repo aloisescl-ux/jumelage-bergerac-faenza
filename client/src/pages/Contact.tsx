@@ -48,44 +48,35 @@ export default function Contact() {
               <div className="flex gap-4">
                 <MapPin className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Adresse</h3>
-                  <p className="text-gray-700">
+                  <h3 className="font-semibold text-gray-900 mb-1">Adresses</h3>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Bergerac, France</strong><br />
                     Association de Jumelage<br />
                     Bergerac-Faenza<br />
                     Bergerac, France
+                  </p>
+                  <p className="text-gray-700">
+                    <strong>Faenza, Italie</strong><br />
+                    {CONTACT.faenzaAddress}
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Quick Contact Form */}
-            <div className="mt-12 bg-blue-50 p-6 rounded-lg">
+            {/* Contact Button */}
+            <div className="mt-12 bg-blue-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-bold mb-4 text-gray-900">
-                Message rapide
+                Nous contacter directement
               </h3>
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Votre nom"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                />
-                <input
-                  type="email"
-                  placeholder="Votre email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                />
-                <textarea
-                  placeholder="Votre message"
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                />
-                <button
-                  type="submit"
-                  className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                >
-                  Envoyer
-                </button>
-              </form>
+              <p className="text-gray-700 mb-6">
+                Pour toute question ou demande, envoyez-nous un email directement.
+              </p>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >
+                Envoyer un email
+              </a>
             </div>
           </div>
 

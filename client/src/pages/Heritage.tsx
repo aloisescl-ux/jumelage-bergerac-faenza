@@ -149,7 +149,7 @@ export default function Heritage() {
             </div>
             <div>
               <img
-                src={IMAGES.cyranoStatue}
+                src={IMAGES.cyranoStatues}
                 alt="Statue de Cyrano de Bergerac"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
@@ -188,14 +188,26 @@ export default function Heritage() {
           </div>
 
           {/* La Dordogne */}
-          <div className="bg-gradient-to-r from-blue-100 to-green-100 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">La Dordogne</h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Bergerac est traversée par l'une des plus belles rivières de France : <strong>la Dordogne</strong>. Présente au cours des différentes époques de l'histoire de Bergerac, elle a d'abord aidé l'économie – activité batelière importante jusqu'au siècle dernier – pour se mettre ensuite au service du tourisme : promenades en gabarre, pêche, randonnées pédestres le long de la Dordogne.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Les grands quais de pierre qui bordent la façade fluviale de la ville rappellent de manière monumentale son passé portuaire. C'est dans ce cadre privilégié que Bergerac affiche son dynamisme touristique !
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h3 className="text-3xl font-bold mb-6 text-gray-900">La Dordogne</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Bergerac est traversée par l'une des plus belles rivières de France : <strong>la Dordogne</strong>. Présente au cours des différentes époques de l'histoire de Bergerac, elle a d'abord aidé l'économie – activité batelière importante jusqu'au siècle dernier – pour se mettre ensuite au service du tourisme : promenades en gabarre, pêche, randonnées pédestres le long de la Dordogne.
+              </p>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Les grands quais de pierre qui bordent la façade fluviale de la ville rappellent de manière monumentale son passé portuaire. C'est dans ce cadre privilégié que Bergerac affiche son dynamisme touristique !
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                La vallée de la Dordogne offre des paysages spectaculaires avec ses châteaux perchés, ses falaises calcaires, et ses villages pittoresques. C'est une destination idéale pour les amateurs de nature, de gastronomie et de patrimoine historique.
+              </p>
+            </div>
+            <div>
+              <img
+                src={IMAGES.dordogneRiver1}
+                alt="La Dordogne"
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </section>
       </div>

@@ -12,7 +12,7 @@ export default function Partners() {
       description: "Radio Vallée Bergerac est une radio associative de proximité diffusant un programme généraliste centré sur Bergerac et sa proche région.",
       website: "https://www.radiovallee.fr",
       category: "Médias",
-      logo: IMAGES.rvbLogo
+      logo: IMAGES.rvbLogoBlue
     },
     {
       id: 2,

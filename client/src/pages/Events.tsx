@@ -92,46 +92,7 @@ export default function Events() {
           </div>
         )}
 
-        {/* Documents telechargeables */}
-        <div className="mt-20 bg-green-50 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-6 text-green-900">
-            Documents et brochures
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a
-              href={DOCUMENTS.maiDesArts2018}
-              download
-              className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-600"
-            >
-              <Download className="w-8 h-8 text-green-600 flex-shrink-0" />
-              <div className="flex-1">
-                <h3 className="font-bold text-gray-900 mb-1">Mai des Arts 2018</h3>
-                <p className="text-sm text-gray-600">Brochure de l'evenement culturel</p>
-              </div>
-              <span className="text-sm text-green-600 font-semibold">PDF</span>
-            </a>
-          </div>
-        </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-20 bg-blue-50 p-8 rounded-lg text-center">
-          <h2 className="text-2xl font-bold mb-4 text-blue-900">
-            Restez informé
-          </h2>
-          <p className="text-gray-700 mb-6">
-            Inscrivez-vous à notre newsletter pour recevoir les annonces des prochains événements.
-          </p>
-          <div className="flex gap-2 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Votre email"
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-            />
-            <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              S'inscrire
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
