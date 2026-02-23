@@ -15,7 +15,6 @@ export function Header() {
     { label: t("nav.about"), href: "/about" },
     { label: t("nav.activities"), href: "/activities" },
     { label: t("nav.gallery"), href: "/gallery" },
-    { label: t("nav.events"), href: "/events" },
     { label: t("nav.heritage"), href: "/heritage" },
     { label: "Partenaires", href: "/partners" },
     { label: t("nav.contact"), href: "/contact" },
@@ -54,11 +53,7 @@ export function Header() {
           {/* Right Section */}
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
-            <Link href="/join" className="hidden sm:inline-flex">
-              <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
-                {t("nav.join")}
-              </Button>
-            </Link>
+
 
             {/* Mobile Menu Button */}
             <button
@@ -87,11 +82,7 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/join" className="w-full" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600">
-                {t("nav.join")}
-              </Button>
-            </Link>
+
           </nav>
         )}
       </div>

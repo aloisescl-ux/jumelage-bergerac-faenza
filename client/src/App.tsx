@@ -11,9 +11,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Activities from "./pages/Activities";
 import Gallery from "./pages/Gallery";
-import Events from "./pages/Events";
 import Heritage from "./pages/Heritage";
-import JoinForm from "./pages/JoinForm";
 import Contact from "./pages/Contact";
 import Partners from "./pages/Partners";
 
@@ -27,9 +25,7 @@ function Router() {
           <Route path="/about" component={About} />
           <Route path="/activities" component={Activities} />
           <Route path="/gallery" component={Gallery} />
-          <Route path="/events" component={Events} />
           <Route path="/heritage" component={Heritage} />
-          <Route path="/join" component={JoinForm} />
           <Route path="/contact" component={Contact} />
           <Route path="/partners" component={Partners} />
           <Route path="/404" component={NotFound} />

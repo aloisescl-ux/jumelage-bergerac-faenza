@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { CONTACT } from "@shared/constants";
 
 export default function Contact() {
@@ -49,16 +49,31 @@ export default function Contact() {
                 <MapPin className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Adresses</h3>
-                  <p className="text-gray-700 mb-4">
-                    <strong>Bergerac, France</strong><br />
-                    Association de Jumelage<br />
-                    Bergerac-Faenza<br />
-                    Bergerac, France
-                  </p>
-                  <p className="text-gray-700">
-                    <strong>Faenza, Italie</strong><br />
-                    {CONTACT.faenzaAddress}
-                  </p>
+                  <div className="text-sm text-gray-700 space-y-4">
+                    {CONTACT.bergeracAddresses.map((addr, idx) => (
+                      <div key={idx} className="pb-3 border-b border-gray-300 last:border-b-0">
+                        <p className="font-semibold text-gray-900">{addr.name}</p>
+                        {addr.street && <p>{addr.street}</p>}
+                        {addr.city && <p>{addr.city}</p>}
+                        {addr.phone && <p>Tél.: {addr.phone}</p>}
+                        {addr.phoneSecretariat && <p>Secrétariat: {addr.phoneSecretariat}</p>}
+                        {addr.email && <p>Email: {addr.email}</p>}
+                        {addr.website && <p><a href={`https://${addr.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{addr.website}</a></p>}
+                      </div>
+                    ))}
+                    <div className="mt-6 pt-6 border-t-2 border-green-600">
+                      <p className="font-bold text-gray-900 mb-3">Faenza, Italie</p>
+                      {CONTACT.faenzaAddresses.map((addr, idx) => (
+                        <div key={idx} className="pb-3 border-b border-gray-300 last:border-b-0">
+                          <p className="font-semibold text-gray-900">{addr.name}</p>
+                          {addr.street && <p>{addr.street}</p>}
+                          {addr.city && <p>{addr.city}</p>}
+                          {addr.phone && <p>Tél.: {addr.phone}</p>}
+                          {addr.website && <p><a href={`https://${addr.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{addr.website}</a></p>}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
