@@ -39,34 +39,27 @@ export default function Gallery() {
     },
     {
       id: 5,
-      title: "Faenza - Vue générale",
-      category: "Faenza",
-      image: IMAGES.faenzaCity,
-      description: "La ville de Faenza en Émilie-Romagne"
-    },
-    {
-      id: 6,
       title: "Céramique traditionnelle",
       category: "Patrimoine",
       image: IMAGES.faenzaCeramics,
       description: "Les célèbres céramiques et faïences de Faenza"
     },
     {
-      id: 7,
+      id: 6,
       title: "Détail de céramique",
       category: "Patrimoine",
       image: IMAGES.ceramicsDetail,
       description: "Détail des motifs traditionnels de la céramique faentine"
     },
     {
-      id: 8,
+      id: 7,
       title: "Vignoble d'Émilie-Romagne",
       category: "Patrimoine",
       image: IMAGES.vignoble,
       description: "Les vignobles de la région d'Émilie-Romagne"
     },
     {
-      id: 9,
+      id: 8,
       title: "Panneau des jumelages",
       category: "Bergerac",
       image: IMAGES.twinningSign,
