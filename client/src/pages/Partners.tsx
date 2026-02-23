@@ -7,7 +7,7 @@ export default function Partners() {
   const partners = [
     {
       id: 1,
-      name: "Radio Vallée Bergerac",
+      name: "RVB : Radio Vallée Bergerac",
       description: "Radio Vallée Bergerac est une radio associative de proximité diffusant un programme généraliste centré sur Bergerac et sa proche région.",
       website: "https://www.radiovallee.fr",
       category: "Médias"
