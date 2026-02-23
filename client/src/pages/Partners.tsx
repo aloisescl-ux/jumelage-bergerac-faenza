@@ -7,24 +7,24 @@ export default function Partners() {
   const partners = [
     {
       id: 1,
-      name: "SPS2i",
-      description: "Créateur de sites INTERNET depuis 1997, l'entreprise sps2i développe des solutions internet (développement web) et est spécialisée dans la création de sites internet dynamique de type vitrine ou boutique en ligne.",
-      website: "https://www.sps2i.fr",
-      category: "Web & Technologie"
-    },
-    {
-      id: 2,
       name: "Radio Vallée Bergerac",
       description: "Radio Vallée Bergerac est une radio associative de proximité diffusant un programme généraliste centré sur Bergerac et sa proche région.",
       website: "https://www.radiovallee.fr",
       category: "Médias"
     },
     {
-      id: 3,
+      id: 2,
       name: "Crédit Agricole Charente-Périgord",
       description: "Le Crédit agricole Charente-Périgord, officiellement Caisse régionale Crédit agricole mutuel de Charente-Périgord, est l'une des 39 caisses régionales du groupe Crédit agricole. Il est implanté dans les départements de la Charente et de la Dordogne.",
       website: "https://www.credit-agricole.fr",
       category: "Finance"
+    },
+    {
+      id: 3,
+      name: " UTL Bergerac",
+      description: "L'Université du Temps Libre de Bergerac est une association culturelle de proximité proposant un programme riche de conférences et d'ateliers thématiques centré sur Bergerac et sa région. Elle offre une large gamme d'activités pédagogiques et de loisirs visant à favoriser le partage des connaissances et le lien social.",
+      website: "https://www.utlbergerac.fr/page/2888267-programme-2025-2026-home",
+      category: "Culture"
     },
   ];
 
