@@ -130,3 +130,4 @@ export const LANGUAGE_NAMES = {
 } as const;
 
 export type Language = typeof LANGUAGES[keyof typeof LANGUAGES];
+export type LanguageName = typeof LANGUAGE_NAMES[keyof typeof LANGUAGE_NAMES];
