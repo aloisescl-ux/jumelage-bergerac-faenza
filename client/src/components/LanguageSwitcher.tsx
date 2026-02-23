@@ -11,17 +11,17 @@ export function LanguageSwitcher() {
         variant={language === LANGUAGES.FR ? "default" : "outline"}
         size="sm"
         onClick={() => setLanguage(LANGUAGES.FR)}
-        className="min-w-12"
+        className="min-w-20"
       >
-        🇫🇷 FR
+        🇫🇷 Français
       </Button>
       <Button
         variant={language === LANGUAGES.IT ? "default" : "outline"}
         size="sm"
         onClick={() => setLanguage(LANGUAGES.IT)}
-        className="min-w-12"
+        className="min-w-20"
       >
-        🇮🇹 IT
+        🇮🇹 Italiano
       </Button>
     </div>
   );

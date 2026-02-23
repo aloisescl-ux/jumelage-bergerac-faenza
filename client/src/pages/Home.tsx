@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { IMAGES } from "@shared/constants";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen, UtensilsCrossed, Plane } from "lucide-react";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -83,24 +83,26 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-                title: t("activities.italianCourses"),
-                icon: "🇮🇹",
-              },
-              {
-                title: t("activities.cookingWorkshops"),
-                icon: "🍝",
-              },
-              {
-                title: t("activities.groupTrips"),
-                icon: "✈️",
-              },
+            {
+              title: t("activities.italianCourses"),
+              icon: BookOpen,
+            },
+            {
+              title: t("activities.cookingWorkshops"),
+              icon: UtensilsCrossed,
+            },
+            {
+              title: t("activities.groupTrips"),
+              icon: Plane,
+            },
             ].map((activity, idx) => (
               <div
                 key={idx}
                 className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="text-5xl mb-4 flex justify-center">{activity.icon}</div>
+                <div className="text-5xl mb-4 flex justify-center text-blue-600">
+                  <activity.icon size={48} />
+                </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   {activity.title}
                 </h3>

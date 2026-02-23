@@ -149,8 +149,8 @@ export default function Heritage() {
             </div>
             <div>
               <img
-                src={IMAGES.heroBergerac}
-                alt="Bergerac"
+                src={IMAGES.cyranoStatue}
+                alt="Statue de Cyrano de Bergerac"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
             </div>

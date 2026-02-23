@@ -63,7 +63,56 @@ export default function Gallery() {
       title: "Panneau des jumelages",
       category: "Bergerac",
       image: IMAGES.twinningSign,
-      description: "Le panneau des villes jumelées avec Bergerac : Faenza, Kénitra, Ostrów Wielkopolski, Repentigny"
+      description: "Le panneau des villes jumelees avec Bergerac : Faenza, Kenitra, Ostrow Wielkopolski, Repentigny"
+    },
+    {
+      id: 9,
+      title: "Palio del Niballo",
+      category: "Patrimoine",
+      image: IMAGES.palioDelNiballo,
+      description: "Le Palio del Niballo, la course equestre traditionnelle de Faenza, un evenement culturel majeur"
+    },
+    {
+      id: 10,
+      title: "Bergerac et la Dordogne",
+      category: "Bergerac",
+      image: IMAGES.bergeracRiver,
+      description: "Vue magnifique de Bergerac reflechie dans la Dordogne"
+    },
+    {
+      id: 11,
+      title: "Architecture de Bergerac",
+      category: "Bergerac",
+      image: IMAGES.bergeracArchitecture,
+      description: "Les facades colorees et historiques de Bergerac"
+    },
+    {
+      id: 12,
+      title: "Rue de Faenza",
+      category: "Faenza",
+      image: IMAGES.faenzaStreet,
+      description: "Une rue pittoresque du centre historique de Faenza"
+    },
+    {
+      id: 13,
+      title: "Piazza de Faenza",
+      category: "Faenza",
+      image: IMAGES.faenzaSquare,
+      description: "La belle place centrale avec ses arcades typiques"
+    },
+    {
+      id: 14,
+      title: "Statue de Cyrano",
+      category: "Bergerac",
+      image: IMAGES.cyranoStatue,
+      description: "La celebre statue de Cyrano de Bergerac dans sa ville natale"
+    },
+    {
+      id: 15,
+      title: "Statues de Cyrano",
+      category: "Patrimoine",
+      image: IMAGES.cyranoStatues,
+      description: "Les differentes statues de Cyrano de Bergerac a travers la ville"
     },
   ];
 

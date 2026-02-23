@@ -10,8 +10,8 @@ export default function About() {
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={IMAGES.heroFaenza}
-            alt="Faenza"
+            src={IMAGES.heroBergerac}
+            alt="Bergerac"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
