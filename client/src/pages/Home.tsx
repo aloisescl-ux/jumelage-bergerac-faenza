@@ -1,12 +1,9 @@
-import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { IMAGES } from "@shared/constants";
 import { ArrowRight, BookOpen, UtensilsCrossed, Plane } from "lucide-react";
 
 export default function Home() {
-  const { t } = useLanguage();
-
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -24,20 +21,20 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 text-center text-white px-4 max-w-3xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
-            {t("hero.title")}
+            L'amitié sans frontières
           </h1>
           <p className="text-xl md:text-2xl mb-6 font-light">
-            {t("hero.subtitle")}
+            Entre Bergerac et Faenza
           </p>
           <p className="text-lg md:text-xl mb-8 text-gray-100">
-            {t("hero.description")}
+            Découvrez les échanges culturels franco-italiens
           </p>
           <Link href="/about">
             <Button
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white"
             >
-              {t("hero.cta")}
+              Découvrir
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
@@ -50,17 +47,17 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-6 text-blue-900">
-                {t("about.title")}
+                À propos du jumelage
               </h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                {t("about.historyText")}
+                Le jumelage entre Bergerac et Faenza a été signé en 1998, marquant le début d'une belle amitié entre la Dordogne et l'Émilie-Romagne.
               </p>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                {t("about.missionText")}
+                Promouvoir les échanges culturels, sportifs, économiques et sociaux entre les deux villes et leurs habitants.
               </p>
               <Link href="/about">
                 <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                  {t("nav.about")}
+                  À propos
                 </Button>
               </Link>
             </div>
@@ -79,20 +76,20 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-blue-900">
-            {t("activities.title")}
+            Nos activités
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
             {
-              title: t("activities.italianCourses"),
+              title: "Cours d'italien",
               icon: BookOpen,
             },
             {
-              title: t("activities.cookingWorkshops"),
+              title: "Ateliers de cuisine",
               icon: UtensilsCrossed,
             },
             {
-              title: t("activities.groupTrips"),
+              title: "Voyages de groupe",
               icon: Plane,
             },
             ].map((activity, idx) => (
@@ -100,45 +97,27 @@ export default function Home() {
                 key={idx}
                 className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="text-5xl mb-4 flex justify-center text-blue-600">
-                  <activity.icon size={48} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <activity.icon className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">
                   {activity.title}
                 </h3>
                 <p className="text-gray-600">
-                  {t("activities.description")}
+                  Participez à nos diverses activités pour découvrir la culture italienne
                 </p>
               </div>
             ))}
           </div>
           <div className="text-center mt-12">
             <Link href="/activities">
-              <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
-                {t("nav.activities")}
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+              >
+                Voir toutes les activités
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-green-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            {t("form.subtitle")}
-          </h2>
-          <p className="text-xl mb-8 text-gray-100 max-w-2xl mx-auto">
-            {t("form.title")}
-          </p>
-          <Link href="/join">
-            <Button
-              size="lg"
-              className="bg-white text-blue-900 hover:bg-gray-100"
-            >
-              {t("nav.join")}
-            </Button>
-          </Link>
         </div>
       </section>
     </div>

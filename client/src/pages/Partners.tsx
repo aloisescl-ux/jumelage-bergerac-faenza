@@ -1,9 +1,9 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+
 import { ExternalLink } from "lucide-react";
 import { IMAGES } from "@shared/constants";
 
 export default function Partners() {
-  const { t } = useLanguage();
+  
 
   const partners = [
     {

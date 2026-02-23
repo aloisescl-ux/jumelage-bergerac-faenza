@@ -1,5 +1,3 @@
-import { useLanguage } from "@/contexts/LanguageContext";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -7,17 +5,16 @@ import { Link } from "wouter";
 import { IMAGES } from "@shared/constants";
 
 export function Header() {
-  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: t("nav.home"), href: "/" },
-    { label: t("nav.about"), href: "/about" },
-    { label: t("nav.activities"), href: "/activities" },
-    { label: t("nav.gallery"), href: "/gallery" },
-    { label: t("nav.heritage"), href: "/heritage" },
+    { label: "Accueil", href: "/" },
+    { label: "À propos", href: "/about" },
+    { label: "Activités", href: "/activities" },
+    { label: "Galerie", href: "/gallery" },
+    { label: "Patrimoine", href: "/heritage" },
     { label: "Partenaires", href: "/partners" },
-    { label: t("nav.contact"), href: "/contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -52,37 +49,29 @@ export function Header() {
 
           {/* Right Section */}
           <div className="flex items-center gap-4">
-            <LanguageSwitcher />
-
-
             {/* Mobile Menu Button */}
             <button
               className="md:hidden p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t pt-4 flex flex-col gap-3">
+          <nav className="md:hidden mt-4 flex flex-col gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-2 rounded hover:bg-gray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-
           </nav>
         )}
       </div>

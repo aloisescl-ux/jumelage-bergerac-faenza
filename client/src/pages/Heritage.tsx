@@ -1,8 +1,8 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+
 import { IMAGES } from "@shared/constants";
 
 export default function Heritage() {
-  const { t } = useLanguage();
+  
 
   return (
     <div className="w-full">

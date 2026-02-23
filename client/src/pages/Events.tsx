@@ -1,9 +1,9 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+
 import { Calendar, MapPin, Clock, Download } from "lucide-react";
 import { DOCUMENTS } from "@shared/constants";
 
 export default function Events() {
-  const { t } = useLanguage();
+  
 
   // Événements exemple - à remplacer par des données de la base de données
   const upcomingEvents = [
@@ -48,14 +48,14 @@ export default function Events() {
       {/* Hero Section */}
       <section className="relative h-80 flex items-center justify-center overflow-hidden bg-gradient-to-r from-blue-900 to-green-900">
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold">{t("events.title")}</h1>
+          <h1 className="text-5xl font-bold">[TEXT]</h1>
         </div>
       </section>
 
       {/* Events List */}
       <div className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold mb-12 text-blue-900">
-          {t("events.upcoming")}
+          [TEXT]
         </h2>
 
         {upcomingEvents.length > 0 ? (
@@ -88,7 +88,7 @@ export default function Events() {
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-lg text-gray-600">{t("events.noEvents")}</p>
+            <p className="text-lg text-gray-600">[TEXT]</p>
           </div>
         )}
 

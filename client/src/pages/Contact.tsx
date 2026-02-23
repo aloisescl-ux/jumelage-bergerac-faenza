@@ -1,9 +1,9 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+
 import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { CONTACT } from "@shared/constants";
 
 export default function Contact() {
-  const { t } = useLanguage();
+  
 
   return (
     <div className="w-full">

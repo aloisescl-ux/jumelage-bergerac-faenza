@@ -1,9 +1,9 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+
 import { IMAGES } from "@shared/constants";
 import { BookOpen, ChefHat, Plane, Users, Trophy, Music } from "lucide-react";
 
 export default function Activities() {
-  const { t } = useLanguage();
+  
 
   const activities = [
     {

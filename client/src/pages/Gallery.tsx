@@ -1,10 +1,10 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { IMAGES } from "@shared/constants";
 
 export default function Gallery() {
-  const { t } = useLanguage();
+  
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   // Galerie avec les images réelles des deux villes

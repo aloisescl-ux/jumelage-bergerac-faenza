@@ -1,11 +1,11 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 
 export default function JoinForm() {
-  const { t } = useLanguage();
+  
   const [formData, setFormData] = useState({
     civility: "",
     firstName: "",
@@ -33,7 +33,7 @@ export default function JoinForm() {
       });
     },
     onError: (error) => {
-      toast.error(error.message || t("form.error"));
+      toast.error(error.message || "Une erreur est survenue");
     },
   });
 
@@ -50,7 +50,7 @@ export default function JoinForm() {
 
     // Validation simple
     if (!formData.firstName || !formData.lastName || !formData.email) {
-      toast.error(t("form.required"));
+      toast.error("Veuillez remplir tous les champs obligatoires");
       return;
     }
 
@@ -80,17 +80,17 @@ export default function JoinForm() {
     <div className="container mx-auto px-4 py-20">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl font-bold mb-4 text-blue-900">
-          {t("form.title")}
+          [TEXT]
         </h1>
         <p className="text-lg text-gray-700 mb-12">
-          {t("form.subtitle")}
+          [TEXT]
         </p>
 
         <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md">
           {/* Civilité */}
           <div className="mb-6">
             <label className="block text-gray-700 font-semibold mb-2">
-              {t("form.civility")} *
+              Réinitialiser *
             </label>
             <select
               name="civility"
@@ -99,7 +99,7 @@ export default function JoinForm() {
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
-              <option value="">-- {t("form.civility")} --</option>
+              <option value="">-- [TEXT] --</option>
               <option value="M">M.</option>
               <option value="Mme">Mme</option>
               <option value="Mlle">Mlle</option>
@@ -109,7 +109,7 @@ export default function JoinForm() {
           {/* Prénom */}
           <div className="mb-6">
             <label className="block text-gray-700 font-semibold mb-2">
-              {t("form.firstName")} *
+              Réinitialiser *
             </label>
             <input
               type="text"
@@ -124,7 +124,7 @@ export default function JoinForm() {
           {/* Nom */}
           <div className="mb-6">
             <label className="block text-gray-700 font-semibold mb-2">
-              {t("form.lastName")} *
+              Réinitialiser *
             </label>
             <input
               type="text"
@@ -139,7 +139,7 @@ export default function JoinForm() {
           {/* Adresse */}
           <div className="mb-6">
             <label className="block text-gray-700 font-semibold mb-2">
-              {t("form.address")} *
+              Réinitialiser *
             </label>
             <input
               type="text"
@@ -154,7 +154,7 @@ export default function JoinForm() {
           {/* Téléphone */}
           <div className="mb-6">
             <label className="block text-gray-700 font-semibold mb-2">
-              {t("form.phone")}
+              Réinitialiser
             </label>
             <input
               type="tel"
@@ -168,7 +168,7 @@ export default function JoinForm() {
           {/* Email */}
           <div className="mb-6">
             <label className="block text-gray-700 font-semibold mb-2">
-              {t("form.email")} *
+              Réinitialiser *
             </label>
             <input
               type="email"
@@ -198,7 +198,7 @@ export default function JoinForm() {
           {/* Origine italienne */}
           <div className="mb-8">
             <label className="block text-gray-700 font-semibold mb-4">
-              {t("form.italianOrigin")}
+              Réinitialiser
             </label>
             <div className="flex gap-6">
               <label className="flex items-center">
@@ -210,7 +210,7 @@ export default function JoinForm() {
                   onChange={handleChange}
                   className="mr-2"
                 />
-                <span>{t("form.yes")}</span>
+                <span>[TEXT]</span>
               </label>
               <label className="flex items-center">
                 <input
@@ -221,7 +221,7 @@ export default function JoinForm() {
                   onChange={handleChange}
                   className="mr-2"
                 />
-                <span>{t("form.no")}</span>
+                <span>[TEXT]</span>
               </label>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function JoinForm() {
               disabled={createMembershipMutation.isPending}
               className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
             >
-              {createMembershipMutation.isPending ? "Envoi en cours..." : t("form.submit")}
+              {createMembershipMutation.isPending ? "Envoi en cours..." : "Soumettre"}
             </Button>
             <Button
               type="reset"
@@ -252,7 +252,7 @@ export default function JoinForm() {
                 })
               }
             >
-              {t("form.reset")}
+              Réinitialiser
             </Button>
           </div>
         </form>
